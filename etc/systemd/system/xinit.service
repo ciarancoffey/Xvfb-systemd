@@ -1,12 +1,11 @@
 [Unit]
 Description=xinit with xvfb
 After=network.target
-                                                                                                                                                                                                                     
-[Service]                                                                                                                                                                                                            
-User=[username]                                                                                                                                                                                                           
-Group=[groupname]                                                                                                                                                                                                          
-ExecStart=/usr/bin/xinit -- /usr/bin/Xvfb :1 -screen 0 1x1x8                                                                                                                                                         
-#xinit -- /usr/bin/Xvfb :1 -screen 0 1x1x8                                                                                                                                                                           
-#Xvfb :1 -screen 0 1x1x8 &                                                                                                                                                                                           
-[Install]                                                                                                                                                                                                            
-WantedBy=multi-user.target 
+[Service]                                                                                                                                                                                                 
+User=[username]
+Group=[groupname]
+ExecStart=/usr/bin/xinit -- /usr/bin/Xvfb :1 -screen 0 1x1x8
+#xinit -- /usr/bin/Xvfb :1 -screen 0 1x1x8
+#Xvfb :1 -screen 0 1x1x8 &
+[Install]
+WantedBy=multi-user.target
